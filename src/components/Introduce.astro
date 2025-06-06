@@ -5,6 +5,7 @@ import SplitText from "./animations/SplitText/SplitText.tsx";
 import Skill from "./Skill.astro";
 import Project from "./Project.astro";
 import ShinyText from "./animations/ShinyText/ShinyText.tsx";
+import PDFViewer from "./PDFViewer.tsx";
 
 const test = () => {
     console.log("test");
@@ -61,6 +62,7 @@ const test = () => {
         </section>
     </div>
 </div>
+<PDFViewer client:load pdfUrl="/2024-lab-introduce.pdf" />
 
 <script>
     // タブ切り替えのロジック
