@@ -4,6 +4,7 @@ title: "Introduce"
 import SplitText from "./animations/SplitText/SplitText.tsx";
 import Skill from "./Skill.astro";
 import Project from "./Project.astro";
+import ShinyText from "./animations/ShinyText/ShinyText.tsx";
 
 const test = () => {
     console.log("test");
@@ -50,11 +51,11 @@ const test = () => {
                 </button>
             </div>
 
-            <div id="skills-content" class="tab-content">
+            <div id="skills-content" class="tab-content hidden">
                 <Skill />
             </div>
 
-            <div id="projects-content" class="tab-content hidden">
+            <div id="projects-content" class="tab-content">
                 <Project />
             </div>
         </section>
@@ -82,5 +83,5 @@ const test = () => {
         });
     });
     // 初期状態でスキルタブをアクティブに
-    (tabs[0] as HTMLElement).click();
+    (tabs[1] as HTMLElement).click();
 </script>
