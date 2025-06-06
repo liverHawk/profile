@@ -168,13 +168,13 @@ const PDFViewer = ({ pdfUrl = null }) => {
     >
       {/* Header */}
       <div 
-        className="flex items-center justify-between px-4 py-3 border-b"
+        className="flex content-items-center px-4 py-3 border-b"
         style={{ 
           backgroundColor: colors.surface,
           borderColor: colors.border 
         }}
       >
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-x-4">
           <h1 className="text-lg font-medium" style={{ color: colors.text }}>
             PDF Viewer
           </h1>

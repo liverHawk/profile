@@ -1,0 +1,27 @@
+---
+const { frontmatter } = Astro.props;
+import "../styles/global.css";
+import PDFViewer from "@components/PDFViewer.tsx";
+---
+
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{frontmatter.title}</title>
+    </head>
+    <body class="dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+        <div class="prose dark:prose-invert mx-auto px-10 py-8">
+            <slot />
+        </div>
+        {
+            frontmatter.pdfUrl && (
+                <div class="m-10">
+                    <PDFViewer client:load pdfUrl={frontmatter.pdfUrl} />
+                </div>
+            )
+        }
+    </body>
+</html>
