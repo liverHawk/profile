@@ -1,6 +1,6 @@
 ---
 import { getProjects } from "../lib/project";
-import ShinyText from "./animations/ShinyText/ShinyText";
+import StarBorder from "./animations/StarBorder/StarBorder";
 ---
 
 <!-- 
@@ -17,9 +17,13 @@ import ShinyText from "./animations/ShinyText/ShinyText";
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     {getProjects().map((project) => (
-        <a 
-            href={`/projects/${project.id}`} 
-            class="block bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg dark:hover:shadow-gray-700/50 transition-all duration-300 hover:-translate-y-1"
+        <StarBorder
+            client:load
+            as="a"
+            href={`/projects/${project.id}`}
+            speed="5s"
+            color="white"
+            className="hover:scale-105 transition-all duration-300"
         >
             <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{project.title}</h3>
             <p class="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
@@ -33,6 +37,6 @@ import ShinyText from "./animations/ShinyText/ShinyText";
                     </span>
                 ))}
             </div>
-        </a>
+        </StarBorder>
     ))}
 </div>
