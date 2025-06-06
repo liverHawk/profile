@@ -1,19 +1,11 @@
 ---
 title: "LiverHawk Profile"
 import Introduce from "../components/Introduce.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 ---
 
-<html lang="ja">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Init</h1>
-		<Introduce />
-	</body>
-</html>
+<BaseLayout>
+	<h1 class="text-3xl">Index page</h1>
+	<Introduce />
+</BaseLayout>
