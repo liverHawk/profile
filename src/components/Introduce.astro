@@ -1,0 +1,46 @@
+---
+title: "Introduce"
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getProgrammingLangs, getFrameworks, getTools } from "../lib/util";
+import IconCard from "../components/IconCard.astro";
+---
+<BaseLayout>
+    <section>
+        <h2>自己紹介</h2>
+        <p>
+            LiverHawkは、プログラミング言語やフレームワーク、ツールに関する情報を提供することを目的としたプロジェクトです。
+            <br />
+            このプロジェクトでは、様々な技術スタックに関する情報を集約し、開発者が学びやすい環境を提供します。
+        </p>
+        
+        <h3>使用している技術スタック</h3>
+        
+        <div class="mb-8">
+            <h4 class="text-lg font-semibold mb-4">Programming Language</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {getProgrammingLangs().map(({ set, name }) => (
+                    <IconCard set={set} name={name} />
+                ))}
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-lg font-semibold mb-4">Frameworks</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {getFrameworks().map(({ set, name }) => (
+                    <IconCard set={set} name={name} />
+                ))}
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h4 class="text-lg font-semibold mb-4">Tools</h4>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {getTools().map(({ set, name }) => (
+                    <IconCard set={set} name={name} />
+                ))}
+            </div>
+        </div>
+    </section>
+</BaseLayout>
