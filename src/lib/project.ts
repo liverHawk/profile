@@ -1,6 +1,7 @@
 import { getColor } from "./langColor";
 
 interface ProjectDetail {
+    id: string;
     title: string;
     description: string;
     image: string;
@@ -8,8 +9,22 @@ interface ProjectDetail {
     tags: string[];
 }
 
+/*
+2sv6d4c8
+trb7h1na
+0xm1a1rn
+zdyeys2m
+c5psf7n1
+ygc093ya
+30xv4gu2
+90vv2res
+qc18k700
+vq9z0545
+*/
+
 const projects: ProjectDetail[] = [
     {
+        id: "2sv6d4c8",
         title: "Project 1",
         description: "Project 1 description",
         image: "https://via.placeholder.com/150",
@@ -17,6 +32,7 @@ const projects: ProjectDetail[] = [
         tags: ["typescript", "react"],
     },
     {
+        id: "trb7h1na",
         title: "Project 2",
         description: "Project 2 description",
         image: "https://via.placeholder.com/150",
@@ -49,4 +65,22 @@ export function getProjects() {
         }
     });
     return af_projects;
+}
+
+export function getProjectById(id: string) {
+    const project = projects.find((project) => project.id === id);
+    if (!project) {
+        return null;
+    }
+    return {
+        ...project,
+        tags: project.tags.map((tag) => {
+            const color = getColor(tag);
+            return {
+                name: tag,
+                color: color,
+                textColor: getTextColor(color),
+            }
+        })
+    }
 }
