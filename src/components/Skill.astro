@@ -1,0 +1,31 @@
+---
+import IconCard from "./IconCard.astro";
+import { getProgrammingLangs, getFrameworks, getTools } from "../lib/util";
+---
+
+<div class="mb-12">
+    <h4 class="text-xl font-semibold mb-6 text-gray-700">Programming Language</h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {getProgrammingLangs().map(({ set, name }) => (
+            <IconCard set={set} name={name} />
+        ))}
+    </div>
+</div>
+
+<div class="mb-12">
+    <h4 class="text-xl font-semibold mb-6 text-gray-700">Frameworks</h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {getFrameworks().map(({ set, name }) => (
+            <IconCard set={set} name={name} />
+        ))}
+    </div>
+</div>
+
+<div class="mb-12">
+    <h4 class="text-xl font-semibold mb-6 text-gray-700">Tools</h4>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {getTools().map(({ set, name }) => (
+            <IconCard set={set} name={name} />
+        ))}
+    </div>
+</div>

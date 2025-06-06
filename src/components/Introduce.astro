@@ -1,62 +1,86 @@
 ---
 title: "Introduce"
 
-import { getProgrammingLangs, getFrameworks, getTools } from "../lib/util";
-import IconCard from "../components/IconCard.astro";
 import SplitText from "./animations/SplitText/SplitText.tsx";
+import Skill from "./Skill.astro";
+import Project from "./Project.astro";
 
 const test = () => {
     console.log("test");
 }
 ---
-<>
-    <SplitText
-        client:load
-        text="LiverHawk"
-        className="text-2xl font-semibold text-center"
-        delay={100}
-        duration={0.6}
-        ease="power3.out"
-        splitType="chars"
-        from={{ opacity: 0, y: 40 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.1}
-        rootMargin="-100px"
-        textAlign="center"
-        onLetterAnimationComplete={test}
-    />
-    <p>
-        LiverHawkは、プログラミング言語やフレームワーク、ツールに関する情報を提供することを目的としたプロジェクトです。
-        <br />
-        このプロジェクトでは、様々な技術スタックに関する情報を集約し、開発者が学びやすい環境を提供します。
-    </p>
-    
-    <h3>使用している技術スタック</h3>
-    
-    <div class="mb-8">
-        <h4 class="text-lg font-semibold mb-4">Programming Language</h4>
-        <div class="justify-self-center grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {getProgrammingLangs().map(({ set, name }) => (
-                <IconCard set={set} name={name} />
-            ))}
-        </div>
+<div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="text-center mb-16">
+        <SplitText
+            client:load
+            text="LiverHawk"
+            className="text-5xl font-bold text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={test}
+        />
+        <p class="mt-6 text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+            I'm a software engineer with a passion for building web applications.
+            <br />
+            And I'm a graduate student at the Osaka Metropolitan University.
+        </p>
     </div>
     
-    <div class="mb-8">
-        <h4 class="text-lg font-semibold mb-4">Frameworks</h4>
-        <div class="justify-self-center grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {getFrameworks().map(({ set, name }) => (
-                <IconCard set={set} name={name} />
-            ))}
-        </div>
+    <div class="space-y-16">
+        <section class="bg-white rounded-xl shadow-lg p-8 transition-all hover:shadow-xl">
+            <div class="flex space-x-4 mb-8 border-b border-gray-200">
+                <button
+                    class="px-6 py-3 text-lg font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-colors"
+                    data-tab="skills"
+                >
+                    スキル
+                </button>
+                <button
+                    class="px-6 py-3 text-lg font-medium text-gray-600 hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition-colors"
+                    data-tab="projects"
+                >
+                    プロジェクト
+                </button>
+            </div>
+
+            <div id="skills-content" class="tab-content">
+                <Skill />
+            </div>
+
+            <div id="projects-content" class="tab-content hidden">
+                <Project />
+            </div>
+        </section>
     </div>
-    
-    <div class="mb-8">
-        <h4 class="text-lg font-semibold mb-4">Tools</h4>
-        <div class="justify-self-center grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {getTools().map(({ set, name }) => (
-                <IconCard set={set} name={name} />
-            ))}
-        </div>
-    </div>
-</>
+</div>
+
+<script>
+    // タブ切り替えのロジック
+    const tabs = document.querySelectorAll('[data-tab]');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // アクティブなタブのスタイルを更新
+            tabs.forEach(t => t.classList.remove('border-blue-600', 'text-blue-600'));
+            tab.classList.add('border-blue-600', 'text-blue-600');
+            // コンテンツの表示/非表示を切り替え
+            const targetId = `${(tab as HTMLElement).dataset.tab}-content`;
+            contents.forEach(content => {
+                content.classList.add('hidden');
+                if (content.id === targetId) {
+                    content.classList.remove('hidden');
+                }
+            });
+        });
+    });
+    // 初期状態でスキルタブをアクティブに
+    (tabs[0] as HTMLElement).click();
+</script>
