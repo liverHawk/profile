@@ -2,6 +2,7 @@
 const { frontmatter } = Astro.props;
 import "../styles/global.css";
 import PDFViewer from "@components/PDFViewer.tsx";
+import { Icon } from "astro-icon/components";
 ---
 
 <html lang="ja">
@@ -13,6 +14,28 @@ import PDFViewer from "@components/PDFViewer.tsx";
         <title>{frontmatter.title}</title>
     </head>
     <body class="dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+        <!-- title header -->
+        <div class="flex justify-between items-center px-10 py-8 bg-gray-100 dark:bg-gray-800">
+            <div class="text-2xl font-bold">
+                {frontmatter.title}
+            </div>
+            <div class="flex items-center gap-x-4">
+                {
+                    frontmatter.githubUrl && (
+                        <a href={frontmatter.githubUrl} target="_blank" class="text-2xl font-bold bg-white">
+                            <Icon name="devicon:github" />
+                        </a>
+                    )
+                }
+                {
+                    frontmatter.link && (
+                        <a href={frontmatter.link} target="_blank" class="text-2xl font-bold">
+                            Get Started
+                        </a>
+                    )
+                }
+            </div>
+        </div>
         <div class="prose dark:prose-invert mx-auto px-10 py-8">
             <slot />
         </div>
