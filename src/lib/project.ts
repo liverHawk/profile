@@ -54,7 +54,6 @@ export function getProjects() {
         return {
             ...project,
             tags: project.tags.map((tag) => {
-                console.log(tag);
                 const color = getColor(tag);
                 return {
                     name: tag,
