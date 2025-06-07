@@ -1,6 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 import "../styles/global.css";
+import "../styles/typography.css";
 import PDFViewer from "@components/PDFViewer.tsx";
 import { Icon } from "astro-icon/components";
 ---
@@ -46,5 +47,9 @@ import { Icon } from "astro-icon/components";
                 </div>
             )
         }
+        <!-- フロートボタン -->
+        <a href="/" class="fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 hover:scale-110">
+            <Icon name="mdi:home" class="w-6 h-6" />
+        </a>
     </body>
 </html>
