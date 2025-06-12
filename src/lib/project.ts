@@ -25,19 +25,19 @@ vq9z0545
 const projects: ProjectDetail[] = [
     {
         id: "2sv6d4c8",
-        title: "Project 1",
-        description: "Project 1 description",
-        image: "https://via.placeholder.com/150",
-        link: "https://example.com",
-        tags: ["typescript", "react"],
+        title: "OMU Navi",
+        description: "大阪公立大学のシステムにアクセスするためのサイトマップ",
+        image: "/navigator.png",
+        link: "https://omu-navigator.vercel.app",
+        tags: ["typescript", "react", "html", "css", "react-router"],
     },
     {
         id: "trb7h1na",
-        title: "Project 2",
-        description: "Project 2 description",
-        image: "https://via.placeholder.com/150",
+        title: "Blockchain Ticket Manager",
+        description: "ブロックチェーンを使ったチケット管理システム",
+        image: "",
         link: "",
-        tags: ["react", "nodejs"],
+        tags: ["ruby", "rails", "solidity", "nextjs"],
     }
 ];
 

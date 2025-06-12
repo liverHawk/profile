@@ -37,7 +37,13 @@ import { Icon } from "astro-icon/components";
                 }
             </div>
         </div>
-        <div class="prose dark:prose-invert mx-auto px-10 py-8">
+        {
+            frontmatter.img && (
+                <img src={frontmatter.img} class="w-2/3 justify-self-center m-5" />
+            )
+        }
+        
+        <div class="w-full prose dark:prose-invert justify-self-center py-8">
             <slot />
         </div>
         {
