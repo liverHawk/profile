@@ -11,7 +11,10 @@ import "../styles/global.css";
         <meta name="generator" content={Astro.generator} />
         <title>{title || frontmatter.title}</title>
     </head>
-    <body class="px-5 md:px-10 lg:px-15 xl:px-20 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <body class="px-0 sm:px-2 lg:px-3 xl:px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
         <slot />
+        <footer class="text-center text-sm text-gray-500 dark:text-gray-400 pb-12">
+            <p>© 2025 LiverHawk. All rights reserved.</p>
+        </footer>
     </body>
 </html>
