@@ -9,6 +9,13 @@ import "../styles/global.css";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <!-- OGP -->
+        <meta property="og:title" content={title || frontmatter.title} />
+        <meta property="og:description" content="I'm a software engineer with a passion for building web applications." />
+        <meta property="og:image" content="/ogp.png" />
+        <meta property="og:url" content={Astro.url.toString()} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="LiverHawk" />
         <title>{title || frontmatter.title}</title>
     </head>
     <body class="px-0 sm:px-2 lg:px-3 xl:px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
