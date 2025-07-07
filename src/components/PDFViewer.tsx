@@ -163,13 +163,13 @@ const PDFViewer = ({ pdfUrl = null }) => {
   return (
     <div 
       ref={containerRef}
-      className="flex flex-col h-screen w-full"
+      className="flex flex-col h-fit md:h-screen w-full lg:w-2/3 mx-auto"
       style={{ backgroundColor: colors.background }}
     >
       {/* Header */}
       <div 
         className="flex content-items-center px-4 py-3 border-b"
-        style={{ 
+        style={{
           backgroundColor: colors.surface,
           borderColor: colors.border 
         }}
