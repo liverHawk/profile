@@ -12,6 +12,13 @@ import { Icon } from "astro-icon/components";
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <!-- OGP -->
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={frontmatter.description} />
+        <meta property="og:image" content={`${import.meta.env.ORIGIN_URL}/ogp.png`} />
+        <meta property="og:url" content={import.meta.env.ORIGIN_URL} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="LiverHawk" />
         <title>{frontmatter.title}</title>
     </head>
     <body class="dark:bg-gray-900 text-gray-800 dark:text-gray-200">
