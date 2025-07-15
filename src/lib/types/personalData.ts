@@ -6,6 +6,7 @@ export interface BaseItem {
     image?: string;
     url?: string;
     tags?: string[];
+    default: number;
 }
 
 export interface Person extends BaseItem {
