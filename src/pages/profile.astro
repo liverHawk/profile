@@ -1,0 +1,11 @@
+---
+import Introduce from "../components/Introduce.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const isName = "true"
+---
+
+<BaseLayout title="LiverHawk Profile">
+	<Introduce isName={isName} />
+</BaseLayout>
