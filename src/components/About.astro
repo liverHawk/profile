@@ -1,5 +1,8 @@
 ---
 title: "About"
+
+const { isName } = Astro.props;
+const trueName = isName == "true";
 ---
 
 
@@ -31,23 +34,43 @@ title: "About"
                             >
                             </div>
                             <div
-                                class="flex flex-col items-center justify-center justify-center"
+                                class="flex flex-col items-center justify-center"
                             >
                                 <p
                                     class="text-[#0d141c] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] text-center"
                                 >
-                                    くりーむ
+                                    {trueName ? "髙藏 駿之" : "くりーむ"}
                                 </p>
                                 <p
                                     class="text-[#49739c] dark:text-gray-400 text-base font-normal leading-normal text-center"
                                 >
                                     大学院生
                                 </p>
-                                <p
-                                    class="text-[#49739c] dark:text-gray-400 text-base font-normal leading-normal text-center"
-                                >
-                                    大阪府
-                                </p>
+                                {
+                                    !trueName && (
+                                        <p
+                                            class="text-[#49739c] dark:text-gray-400 text-base font-normal leading-normal text-center"
+                                        >
+                                            大阪府
+                                        </p>
+                                    )
+                                }
+                                {
+                                    trueName && (
+                                        <>
+                                            <p
+                                                class="text-[#49739c] dark:text-gray-400 text-base font-normal leading-normal text-center"
+                                            >
+                                                大阪公立大学 大学院 情報学研究科
+                                            </p>
+                                            <p
+                                                class="text-[#49739c] dark:text-gray-400 text-base font-normal leading-normal text-center"
+                                            >
+                                                学際情報学専攻 博士前期課程 2年
+                                            </p>
+                                        </>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
