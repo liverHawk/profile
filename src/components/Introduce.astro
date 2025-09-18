@@ -83,6 +83,13 @@ const trueName = isName == "true";
     // タブ切り替えのロジック
     const EXPIRE_MINUTES = 5;
 
+    if (window.location.pathname === "/profile") {
+        localStorage.setItem('activeTab', "about");
+        // 必要なら有効期限もセット
+        const now = new Date().getTime();
+        localStorage.setItem('activeTabExpire', (now + EXPIRE_MINUTES * 60 * 1000).toString());
+    }
+
     const tabs = document.querySelectorAll('[data-tab]');
     const contents = document.querySelectorAll('.tab-content');
 
