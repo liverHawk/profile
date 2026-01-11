@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+import Card from '../components/Card.astro';
+---
+
+<BaseLayout title="Affiliations">
+    <div class="flex flex-col justify-center items-center h-screen">
+        <h1 class="text-4xl font-bold">Affiliations</h1>
+
+        <Card title="Perplexity" className="w-1/2">
+            <a href="https://pplx.ai/toshiyuki-takakura" class="underline" target="_blank" rel="noopener noreferrer">Go to Perplexity</a>
+        </Card>
+
+        <Card title="Merlin AI" className="w-1/2">
+            <a href="https://www.getmerlin.in/chat?ref=zwi0ode" class="underline" target="_blank" rel="noopener noreferrer">Go to Merlin AI</a>
+            <p>Merlin AI is a platform that allows you to chat with AI.</p>
+        </Card>
+    </div>
+</BaseLayout>

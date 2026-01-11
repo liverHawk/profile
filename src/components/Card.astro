@@ -1,0 +1,8 @@
+---
+const { title, className } = Astro.props;
+---
+
+<div class={`my-2 px-4 py-2 border border-gray-200 rounded-lg ${className}`}>
+    <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">{title}</h3>
+    <slot />
+</div>

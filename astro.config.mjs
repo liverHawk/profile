@@ -6,9 +6,13 @@ import icon from 'astro-icon';
 import tailwindcss from '@tailwindcss/vite';
 import devtoolsJson from 'vite-plugin-devtools-json';
 
+import starlight from '@astrojs/starlight';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), icon()],
+  integrations: [react(), icon(), starlight({
+    title: 'LiverHawk Profile'
+  })],
 
   vite: {
     plugins: [
