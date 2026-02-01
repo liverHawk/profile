@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import { remarkPlugins, rehypePlugins } from './remark/plugins';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
@@ -24,5 +24,15 @@ export default defineConfig({
   markdown: {
     remarkPlugins: remarkPlugins,
     rehypePlugins: rehypePlugins,
+  },
+  env: {
+    schema: {
+      MERLIN_CODE: {
+        type: "string",
+        context: "server",
+        access: "secret",
+        default: "MERLIN20"
+      },
+    },
   }
 });

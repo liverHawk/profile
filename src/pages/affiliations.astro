@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
 import Card from '../components/Card.astro';
+
+import { MERLIN_CODE } from "astro:env/server";
 ---
 
 <BaseLayout title="Affiliations">
@@ -13,8 +15,13 @@ import Card from '../components/Card.astro';
         </Card>
 
         <Card title="Merlin AI" className="w-1/2">
-            <a href="https://www.getmerlin.in/chat?ref=zwi0ode" class="underline" target="_blank" rel="noopener noreferrer">Go to Merlin AI</a>
+            <a href="https://www.getmerlin.in/?tap_a=141224-287fba&ref=zwi0ode" target="_BLANK" rel="nofollow"><img src="https://static.tapfiliate.com/65ec2070a6d41023226086.png?a=141224-287fba"></a>
+            
             <p>Merlin AI is a platform that allows you to chat with AI.</p>
+            <details>
+                <summary>Secret....</summary>
+                <p>The code <code class="bg-gray-300 p-1 rounded-md">{MERLIN_CODE}</code> gives you <b>$60 per year.</b></p>
+            </details>
         </Card>
     </div>
 </BaseLayout>
