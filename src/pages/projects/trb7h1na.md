@@ -15,7 +15,7 @@ pdfUrl: /ktcc2024_presentation.pdf
 #Solidity
 #Next.js
 
-## Assugnment
+## Assignment
 
 - コンサートなどのチケットが高額転売されている
   - 転売によるチケットによって入場することができる

@@ -38,6 +38,14 @@ const projects: ProjectDetail[] = [
         image: "",
         link: "",
         tags: ["ruby", "rails", "solidity", "nextjs"],
+    },
+    {
+        id: "4y9bwsmc",
+        title: "レジュメ管理アプリ",
+        description: "レジュメをアップロードし、閲覧できるアプリ",
+        image: "",
+        link: "https://ktcc.purple-hawk.com",
+        tags: ["ruby", "rails", "pdf", "s3"],
     }
 ];
 
