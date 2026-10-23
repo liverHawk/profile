@@ -1,6 +1,40 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@theme {
+  --color-surface-base: #07080B;
+  --color-surface-card: #0F1117;
+  --color-surface-overlay: #181B24;
+  --color-surface-container: #1f1f24;
+  --color-surface-container-low: #1a1b20;
+  --color-surface-container-high: #292a2e;
+  --color-surface-container-highest: #343439;
+  --color-border-subtle: #1E2230;
+  --color-border-bright: #2E364F;
+  --color-primary-base: #7c5cfc;
+  --color-primary-light: #cabeff;
+  --color-primary-container: #947dff;
+  --color-secondary-base: #00d2fe;
+  --color-secondary-light: #a4e7ff;
+  --color-tertiary-base: #26e19a;
+  --color-tertiary-light: #53feb4;
+  --color-text-primary: #F3F4F8;
+  --color-text-muted: #8A91A5;
+  --color-badge-discount: #F59E0B;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Geist', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
 @keyframes shine {
   0% {
     background-position: 100%;

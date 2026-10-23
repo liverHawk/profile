@@ -1033,7 +1033,7 @@
 
     "remark-gfm": ["remark-gfm@4.0.1", "", { "dependencies": { "@types/mdast": "^4.0.0", "mdast-util-gfm": "^3.0.0", "micromark-extension-gfm": "^3.0.0", "remark-parse": "^11.0.0", "remark-stringify": "^11.0.0", "unified": "^11.0.0" } }, "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg=="],
 
-    "remark-github-flavor": ["remark-github-flavor@github:liverhawk/remark-github-flavor#eba6747", { "dependencies": { "remark": "^15.0.1" }, "peerDependencies": { "typescript": "^5" } }, "liverHawk-remark-github-flavor-eba6747"],
+    "remark-github-flavor": ["remark-github-flavor@github:liverhawk/remark-github-flavor#eba6747", { "dependencies": { "remark": "^15.0.1" }, "peerDependencies": { "typescript": "^5" } }, "liverHawk-remark-github-flavor-eba6747", "sha512-PFlt8juIEjiUorlD4X0eRGX2yvIze1UJtAClSt4CUeDcTOFOtOw4Mw+TYb0IaBK3X31jbegEbeGvO4th3Yrs4A=="],
 
     "remark-images": ["remark-images@4.1.0", "", { "dependencies": { "@types/mdast": "^4.0.0", "collapse-white-space": "^2.0.0", "is-url": "^1.0.0", "unist-util-position": "^5.0.0", "unist-util-visit-parents": "^6.0.0" } }, "sha512-16D81wwqssfexLeYXTHiw05rEbvt7K0dOef8Fjx86hbTwPEHDgzt610Z2l0TDeybdU42M6szvQzf/PtmiQC/Pw=="],
 

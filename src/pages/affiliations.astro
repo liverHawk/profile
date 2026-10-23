@@ -1,27 +1,42 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css";
-import Card from '../components/Card.astro';
-
-import { MERLIN_CODE } from "astro:env/server";
+import App from "../components/stackref/App";
 ---
 
-<BaseLayout title="Affiliations">
-    <div class="flex flex-col justify-center items-center h-screen">
-        <h1 class="text-4xl font-bold">Affiliations</h1>
-
-        <Card title="Perplexity" className="w-1/2">
-            <a href="https://pplx.ai/toshiyuki-takakura" class="underline" target="_blank" rel="noopener noreferrer">Go to Perplexity</a>
-        </Card>
-
-        <Card title="Merlin AI" className="w-1/2">
-            <a href="https://www.getmerlin.in/?tap_a=141224-287fba&ref=zwi0ode" target="_BLANK" rel="nofollow"><img src="https://static.tapfiliate.com/65ec2070a6d41023226086.png?a=141224-287fba"></a>
-            
-            <p>Merlin AI is a platform that allows you to chat with AI.</p>
-            <details>
-                <summary>Secret....</summary>
-                <p>The code <code class="bg-gray-300 p-1 rounded-md">{MERLIN_CODE}</code> gives you <b>$60 per year.</b></p>
-            </details>
-        </Card>
-    </div>
-</BaseLayout>
+<!doctype html>
+<html lang="ja" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>StackRef — Curated Tech Stack & Exclusive Referral Perks | LiverHawk</title>
+    <meta name="description" content="厳選された開発者ツール、限定プロモーションコード、無料クレジット、クラウド特典のキュレーションインデックス。" />
+    <meta property="og:title" content="StackRef — Curated Tech Stack & Exclusive Referral Perks" />
+    <meta property="og:description" content="厳選された開発者ツール、限定プロモーションコード、無料クレジット、クラウド特典のキュレーションインデックス。" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #07080B;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1E2230;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2E364F;
+      }
+    </style>
+  </head>
+  <body class="bg-[#07080B] text-[#e3e2e8] antialiased selection:bg-[#7c5cfc]/30 selection:text-white">
+    <App client:load />
+  </body>
+</html>
