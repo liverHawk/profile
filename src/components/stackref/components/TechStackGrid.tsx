@@ -71,6 +71,8 @@ export const TechStackGrid: React.FC<TechStackGridProps> = ({
         return 'text-[#00d2fe]';
       case 'cloudflare':
         return 'text-[#cabeff]';
+      case 'wise':
+        return 'text-[#26e19a]';
       default:
         return 'text-[#cabeff]';
     }

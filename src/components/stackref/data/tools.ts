@@ -369,6 +369,44 @@ export const INITIAL_TOOLS: Tool[] = [
       '無料枠で毎日100,000回以上のWorkerリクエストおよび3台のFly.ioコンテナが即時利用可能です。'
     ],
     curatorNotes: '個人開発やSaaSの初動インフラとして最強の組み合わせ。特にCloudflare R2の転送料金無料とPagesのGit連携デプロイ速度は圧倒的です。'
+  },
+  {
+    id: 'wise',
+    name: 'Wise',
+    category: 'productivity',
+    categoryLabel: '生産性・ランチャー',
+    subCategory: 'FINTECH & GLOBAL PAYMENTS',
+    badge: '初回送金手数料無料',
+    badgeColor: 'tertiary',
+    tagline: '実際の為替レートと低手数料で世界中へ送金・受取。海外SaaS決済や外貨受取に必須の金融インフラ。',
+    description: '隠れた為替手数料なしのミッドマーケットレートで、世界160カ国・40通貨以上へ即時送金。海外クラウドサービスのドル決済やフリーランスの外貨受取・デビットカード決済に最適。',
+    rating: 4.9,
+    ratingLabel: '4.9 / 5.0 (国際送金デファクト)',
+    perkTitle: '🎁 紹介特典: 最大75,000円（£500相当）までの送金手数料が無料',
+    perkDetail: '紹介リンク経由の新規登録で初回送金手数料無料クーポンが自動適用',
+    perkBadgeText: '送金手数料無料',
+    referralCode: 'invite/dic/takakurat2',
+    referralUrl: 'https://wise.com/invite/dic/takakurat2',
+    ctaText: '特典付きでWiseを始める',
+    iconType: 'key',
+    savingsEstimate: '最大¥7,500相当',
+    features: [
+      '銀行の最大数分の一の格安手数料＆実際の為替レート（ミッドマーケットレート）',
+      '世界40通貨以上を同一口座内で即時両替・保有できるマルチカレンシー口座',
+      '海外SaaS（AWS, OpenAI等）のドル決済に対応したWiseデビットカード',
+      '米ドル、ユーロ、英ポンドなどの現地銀行口座情報（ルーティング番号/IBAN）を取得可能'
+    ],
+    specs: [
+      { label: '対応通貨', value: '40以上の通貨を保有・両替、160カ国以上へ送金' },
+      { label: '送金手数料', value: 'ミッドマーケットレート（上乗せ為替手数料ゼロ）' },
+      { label: '規制・認可', value: '英国FCA、関東財務局（資金移動業者）など各国の金融当局に登録' }
+    ],
+    howToRedeem: [
+      '「特典付きでWiseを始める」ボタンをクリックして紹介リンクからWise公式サイトを開きます。',
+      'メールアドレスまたはGoogleアカウント等で新規会員登録（無料）を行います。',
+      '初回送金手続き時に、最大75,000円（または£500相当）までの送金手数料無料クーポンが自動的に適用されます。'
+    ],
+    curatorNotes: '海外発のSaaS決済や海外クライアントとの外貨取引・国際送金において、日本のメガバンクやPayPalの手数料と比べ圧倒的なコストパフォーマンスを誇ります。Wiseデビットカードでのドル決済も重宝しています。'
   }
 ];
 
@@ -384,14 +422,14 @@ export const CATEGORY_FILTERS = [
 export const STAT_METRICS = [
   {
     label: '掲載ツール数',
-    value: '14+',
+    value: '15+',
     subtext: '動作確認済み',
     subtextIcon: 'check_circle',
     colorClass: 'text-tertiary-base'
   },
   {
     label: '累計ユーザー節約額',
-    value: '$240+',
+    value: '$300+',
     subtext: '相当の限定特典',
     colorClass: 'text-secondary-base'
   },
